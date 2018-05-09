@@ -380,6 +380,9 @@ copyPackageBootstrap() {
 #####################
 
 help () {
+  echo _______________________________________________________
+  echo ___________________aliases and functions_______________
+  echo _______________________________________________________
   echo api_____________________________serves json api on port 8088
   echo nuke____________________________Remove file or directory
   echo gpom____________________________git push origin master
