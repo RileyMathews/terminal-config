@@ -156,7 +156,7 @@ ufgh() {
 # functions
 #
 api() {
-  json-server -p 8088 -w $1
+  ttab -w json-server -p 8088 -w $1
 }
 
 mg() {
