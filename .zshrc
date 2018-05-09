@@ -140,7 +140,7 @@ btgh() {
   git add .zshrc
   git commit -m "edited zshrc"
   git push origin master
-  cd
+  cd -
 }
 
 
