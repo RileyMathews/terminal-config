@@ -132,6 +132,18 @@ alias zshthemes="cd ~/.oh-my-zsh/themes"
 #
 
 
+#
+# terminal config functions
+#
+btgh() {
+  cd ~/TerminalConfig
+  git add .zshrc
+  git commit -m "edited zshrc"
+  git push origin master
+  cd
+}
+
+
 
 #
 # functions
