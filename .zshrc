@@ -405,6 +405,7 @@ help () {
   echo mdpbt___________________________make new distributable project with bootstrap and template package file as of May 8, 2018
   echo rp______________________________open up two new terminal windows with http server and grunt running
   echo btgh____________________________commits and pushes zshrc file to github
+  echo ufgh____________________________updates zshrc file from github
   echo _______________________________________________________
   echo _______________________________________________________
   echo Copy functions
