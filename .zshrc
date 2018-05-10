@@ -151,7 +151,7 @@ udzsh() {
 }
 
 butemp() {
-  cd ~/Templates
+  cd ~/templates
   git add .
   git commit -m "edited templates"
   git push origin master
@@ -159,7 +159,7 @@ butemp() {
 }
 
 udtemp() {
-  cd ~/Templates
+  cd ~/templates
   git pull origin master
   cd -
 }
