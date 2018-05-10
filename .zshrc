@@ -135,7 +135,7 @@ alias zshthemes="cd ~/.oh-my-zsh/themes"
 #
 # terminal config functions
 #
-btgh() {
+backupTerminal() {
   cd ~/TerminalConfig
   git add .zshrc
   git commit -m "edited zshrc"
@@ -143,13 +143,26 @@ btgh() {
   cd -
 }
 
-ufgh() {
+updateTerminal() {
   cd ~/TerminalConfig
   git pull origin master
   cd -
   zshsource
 }
 
+backupTemplates() {
+  cd ~/Templates
+  git add .
+  git commit -m "edited templates"
+  git push origin master
+  cd -
+}
+
+updateTemplates() {
+  cd ~/Templates
+  git pull origin master
+  cd -
+}
 
 
 #
@@ -370,6 +383,10 @@ copyPackage() {
 
 copyPackageBootstrap() {
   cp ~/templates/npm/packageBootstrap.json ./package.json
+}
+
+copyFavicon() {
+  cp ~/templates/favicon/favicon.ico ./favicon.ico
 }
 
 
