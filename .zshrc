@@ -135,7 +135,7 @@ alias zshthemes="cd ~/.oh-my-zsh/themes"
 #
 # terminal config functions
 #
-backupTerminal() {
+buzsh() {
   cd ~/TerminalConfig
   git add .zshrc
   git commit -m "edited zshrc"
@@ -143,14 +143,14 @@ backupTerminal() {
   cd -
 }
 
-updateTerminal() {
+udzsh() {
   cd ~/TerminalConfig
   git pull origin master
   cd -
   zshsource
 }
 
-backupTemplates() {
+butemp() {
   cd ~/Templates
   git add .
   git commit -m "edited templates"
@@ -158,7 +158,7 @@ backupTemplates() {
   cd -
 }
 
-updateTemplates() {
+udtemp() {
   cd ~/Templates
   git pull origin master
   cd -
@@ -424,8 +424,10 @@ help () {
   echo mdpt____________________________make new distributable project with template package file as of May 8, 2018
   echo mdpbt___________________________make new distributable project with bootstrap and template package file as of May 8, 2018
   echo rp______________________________open up two new terminal windows with http server and grunt running
-  echo btgh____________________________commits and pushes zshrc file to github
-  echo ufgh____________________________updates zshrc file from github
+  echo buzsh___________________________commits and pushes zshrc file to github
+  echo udzsh___________________________updates zshrc file from github
+  echo butemp__________________________push up templates to github
+  echo udtemp__________________________updates templates from github
   echo _______________________________________________________
   echo _______________________________________________________
   echo Copy functions
