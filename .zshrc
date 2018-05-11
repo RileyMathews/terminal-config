@@ -14,7 +14,9 @@ ZSH_THEME="af-magic"
 # cause zsh load theme from this variable instead of
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# ZSH_THEME_RANDOM_CANDIDATES=( "af-magic" "gnzh" "bira" "avit" "agnoster" )
+# DEFAULT_USER="rileymathews"
+# prompt_context(){}
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -284,7 +286,9 @@ mdpb () {
     copySASSBootstrap
     cd ..
     mkdir scripts
+    cd scripts
     copyJSBoot
+    cd ..
     copyESLint
     copyGrunt
     npm init
