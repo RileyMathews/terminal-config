@@ -248,6 +248,7 @@ mdp () {
     npm i grunt-contrib-watch --save-dev
     npm i grunt-eslint --save-dev
     npm i grunt-sass --save-dev
+    npm i jquery --save-dev
     cd ..
 }
 
@@ -283,7 +284,7 @@ mdpb () {
     copySASSBootstrap
     cd ..
     mkdir scripts
-    touch scripts/main.js
+    copyJSBoot
     copyESLint
     copyGrunt
     npm init
@@ -296,6 +297,7 @@ mdpb () {
     npm i grunt-sass --save-dev
     npm i bootstrap --save-dev
     npm i jquery --save-dev
+    npm i popper.js --save-dev
     cd ..
 }
 
@@ -311,7 +313,7 @@ mdpbt () {
     copySASSBootstrap
     cd ..
     mkdir scripts
-    touch scripts/main.js
+    copyJSBoot
     copyESLint
     copyGrunt
     copyPackageBootstrap
@@ -387,6 +389,10 @@ copyPackageBootstrap() {
 
 copyFavicon() {
   cp ~/templates/favicon/favicon.ico ./favicon.ico
+}
+
+copyJSBoot() {
+  cp ~/templates/javascript/main.js ./main.js
 }
 
 
