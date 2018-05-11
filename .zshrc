@@ -242,7 +242,7 @@ mdp () {
     touch scripts/main.js
     copyESLint
     copyGrunt
-    npm init
+    npm init -y
     npm i grunt --save-dev
     npm i grunt-browserify --save-dev
     npm i grunt-contrib-copy --save-dev
@@ -291,7 +291,7 @@ mdpb () {
     cd ..
     copyESLint
     copyGrunt
-    npm init
+    npm init -y
     npm i grunt --save-dev
     npm i grunt-browserify --save-dev
     npm i grunt-contrib-copy --save-dev
