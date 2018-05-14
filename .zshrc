@@ -244,14 +244,7 @@ mdp () {
     copyESLint
     copyGrunt
     npm init -y
-    npm i grunt --save-dev
-    npm i grunt-browserify --save-dev
-    npm i grunt-contrib-copy --save-dev
-    npm i grunt-contrib-uglify-es --save-dev
-    npm i grunt-contrib-watch --save-dev
-    npm i grunt-eslint --save-dev
-    npm i grunt-sass --save-dev
-    npm i jquery --save-dev
+    npm i -D grunt grunt-browserify grunt-contrib-copy grunt-contrib-uglify-es grunt-contrib-watch grunt-eslint grunt-sass jquery
     cd ..
 }
 
@@ -293,16 +286,7 @@ mdpb () {
     copyESLint
     copyGrunt
     npm init -y
-    npm i grunt --save-dev
-    npm i grunt-browserify --save-dev
-    npm i grunt-contrib-copy --save-dev
-    npm i grunt-contrib-uglify-es --save-dev
-    npm i grunt-contrib-watch --save-dev
-    npm i grunt-eslint --save-dev
-    npm i grunt-sass --save-dev
-    npm i bootstrap --save-dev
-    npm i jquery --save-dev
-    npm i popper.js --save-dev
+    npm i -D grunt grunt-browserify grunt-contrib-copy grunt-contrib-uglify-es grunt-contrib-watch grunt-eslint grunt-sass bootstrap jquery popper.js
     cd ..
 }
 
