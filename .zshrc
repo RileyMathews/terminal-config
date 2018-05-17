@@ -314,7 +314,7 @@ mdpbt () {
 
 rp () {
   cd dist
-  ttab -w hs
+  ttab -w pyserve
   cd ..
   cd src
   ttab -w grunt
