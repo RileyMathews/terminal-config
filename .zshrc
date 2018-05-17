@@ -129,6 +129,8 @@ alias golive="~/ngrok http 8080"
 
 alias zshthemes="cd ~/.oh-my-zsh/themes"
 
+alias pyserve="python3 -m http.server 8080"
+
 #
 # Template Aliases
 #
@@ -396,6 +398,7 @@ help () {
   echo ___________________aliases and functions_______________
   echo _______________________________________________________
   echo api_____________________________serves json api on port 8088
+  echo pyserve_________________________serves a python http server on port 8080
   echo nuke____________________________Remove file or directory
   echo gpom____________________________git push origin master
   echo gpum____________________________git push upstream master
