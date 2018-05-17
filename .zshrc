@@ -7,16 +7,16 @@ export ZSH=/Users/rileymathews/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="af-magic"
+ZSH_THEME="random"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "af-magic" "gnzh" "bira" "avit" "agnoster" )
-# DEFAULT_USER="rileymathews"
-# prompt_context(){}
+ZSH_THEME_RANDOM_CANDIDATES=( "af-magic" "gnzh" "bira" "avit" "agnoster" )
+DEFAULT_USER="riley"
+prompt_context(){}
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -62,7 +62,6 @@ ZSH_THEME="af-magic"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  npm
   web-search
   autojump
   osx
