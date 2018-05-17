@@ -321,6 +321,14 @@ rp () {
   cd ..
 }
 
+rpl () {
+  cd dist
+  gnome-terminal --tab -- python3 -m http.server --bind 127.0.0.1 8080
+  cd ..
+  cd src
+  gnome-terminal --tab -- grunt
+}
+
 
 #Auto jump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
