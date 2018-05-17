@@ -129,7 +129,7 @@ alias golive="~/ngrok http 8080"
 
 alias zshthemes="cd ~/.oh-my-zsh/themes"
 
-alias pyserve="python3 -m http.server 8080"
+alias pyserve="python3 -m http.server 127.0.0.1 8080"
 
 #
 # Template Aliases
