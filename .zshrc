@@ -128,6 +128,7 @@ alias zshthemes="cd ~/.oh-my-zsh/themes"
 
 alias pyserve="python3 -m http.server --bind 127.0.0.1 8080"
 
+
 #
 # Template Aliases
 #
@@ -169,9 +170,16 @@ udtemp() {
 #
 # functions
 #
+convertpic() {
+  convert $1 -sampling-factor 4:2:0 -strip [-resize WxH] [-quality N] [-interlace JPEG] [-colorspace Gray/sRGB] $1
+}
 
 api() {
   ttab -w json-server -p 8088 -w $1
+}
+
+apil() {
+  gnome-terminal --tab -- json-server -p 8088 -w $1
 }
 
 mg() {
