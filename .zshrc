@@ -171,7 +171,7 @@ udtemp() {
 # functions
 #
 convertpic() {
-  convert $1 -sampling-factor 4:2:0 -strip [-resize WxH] [-quality N] [-interlace JPEG] [-colorspace Gray/sRGB] $1
+  convert $1 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace sRGB $1
 }
 
 api() {
