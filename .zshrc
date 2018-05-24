@@ -427,6 +427,10 @@ copyJSBoot() {
   cp ~/templates/javascript/main.js ./main.js
 }
 
+copyReactLint() {
+  cp ~/templates/eslint/ReactESLint ./.eslintrc
+}
+
 
 
 
