@@ -359,6 +359,7 @@ rpl () {
   cd ..
   cd src
   gnome-terminal --tab -- grunt
+  cd ..
 }
 
 
