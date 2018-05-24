@@ -238,7 +238,7 @@ simplejquery () {
 <head>
   <meta charset="utf-8">
   <title>Nashville Software School</title>
-  <link rel="stylesheet" href="./'$1'">
+  <link rel="stylesheet" href="./styless.css">
 
 </head>
 
@@ -250,12 +250,12 @@ simplejquery () {
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-  <script src="'$2'"></script>
+  <script src="main.js"></script>
 </body>
 </html>' >> index.html
 
-  touch $1
-  touch $2
+  touch styles.css
+  touch main.js
 }
 
 #####
