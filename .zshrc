@@ -232,7 +232,7 @@ echo '<!doctype html>
   touch $2
 }
 
-simpleJquery () {
+simplejquery () {
   echo '<!doctype html> 
 <html lang="en">
 <head>
@@ -244,7 +244,8 @@ simpleJquery () {
 
 <body>
 
-  <article></article>
+  <div id="output"></div>
+
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -457,6 +458,7 @@ help () {
   echo gitupdate_______________________git fetch all and pull master
   echo gitstart________________________starts git repo locally and pushes to provided remote
   echo simplehtml______________________start a simple html project with provided styles and js file
+  echo simplejquery____________________start a simple html project with jquery tag included
   echo mdp_____________________________make new distributable project
   echo mdpb____________________________make new distributable project with bootstrap
   echo mdpt____________________________make new distributable project with template package file as of May 8, 2018
