@@ -128,6 +128,7 @@ alias zshthemes="cd ~/.oh-my-zsh/themes"
 
 alias pyserve="python3 -m http.server --bind 127.0.0.1 8080"
 
+alias find8080="sudo lsof -i:8080"
 
 #
 # Template Aliases
@@ -223,6 +224,31 @@ echo '<!doctype html>
 
   <footer></footer>
 
+  <script src="'$2'"></script>
+</body>
+</html>' >> index.html
+
+  touch $1
+  touch $2
+}
+
+simpleJquery () {
+  echo '<!doctype html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nashville Software School</title>
+  <link rel="stylesheet" href="./'$1'">
+
+</head>
+
+<body>
+
+  <article></article>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
   <script src="'$2'"></script>
 </body>
 </html>' >> index.html
@@ -412,6 +438,7 @@ help () {
   echo _______________________________________________________
   echo api_____________________________serves json api on port 8088
   echo pyserve_________________________serves a python http server on port 8080
+  echo find8080________________________finds the process currently using port 8080
   echo nuke____________________________Remove file or directory
   echo gpom____________________________git push origin master
   echo gpum____________________________git push upstream master
