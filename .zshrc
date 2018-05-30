@@ -258,6 +258,24 @@ simplejquery () {
   touch main.js
 }
 
+
+reactComponent () {
+  echo "import React, { Component } from 'react'
+
+
+class '$1' extends Component {
+
+
+    render() {
+        return (
+        
+        )
+    }
+}
+
+export default '$1'" 
+}
+
 #####
 # project functions
 #####
@@ -484,4 +502,5 @@ help () {
   echo copyESLint
   echo copyGitIgnore
   echo copyHTMLBootstrap
+  echo copyReactLint
 }
