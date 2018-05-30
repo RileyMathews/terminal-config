@@ -263,7 +263,7 @@ reactComponent () {
   echo "import React, { Component } from 'react'
 
 
-class '$1' extends Component {
+class $1 extends Component {
 
 
     render() {
@@ -273,7 +273,7 @@ class '$1' extends Component {
     }
 }
 
-export default '$1'" 
+export default $1" >> $1.js
 }
 
 #####
