@@ -482,6 +482,7 @@ help () {
   echo gitstart________________________starts git repo locally and pushes to provided remote
   echo simplehtml______________________start a simple html project with provided styles and js file
   echo simplejquery____________________start a simple html project with jquery tag included
+  echo RComp___________________________creates a react component template file
   echo mdp_____________________________make new distributable project
   echo mdpb____________________________make new distributable project with bootstrap
   echo mdpt____________________________make new distributable project with template package file as of May 8, 2018
