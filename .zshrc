@@ -259,7 +259,7 @@ simplejquery () {
 }
 
 
-reactComponent () {
+RComp () {
   echo "import React, { Component } from 'react'
 
 
