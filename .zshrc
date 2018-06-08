@@ -15,6 +15,8 @@ ZSH_THEME="riley"
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
 
+######JAVA####
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -360,6 +362,26 @@ mdpbt () {
     copyPackageBootstrap
     npm i
     cd ..
+}
+
+ReactBulma () {
+  npx create-react-app $1
+  cd $1
+  npm i bulma --save-dev
+  npm i bloomer --save-dev
+  npm i node-sass-chokidar --save-dev
+  npm i npm-run-all --save-dev
+  copyReactLint
+  cd src
+  mv index.css index.scss
+  cd ..
+  echo '"build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",' | pbcopy
+  code package.json
 }
 
 rp () {
