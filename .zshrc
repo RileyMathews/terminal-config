@@ -132,6 +132,8 @@ alias pyserve="python3 -m http.server --bind 127.0.0.1 8080"
 
 alias find8080="sudo lsof -i:8080"
 
+alias apihere="json-server -w database.json -p 8088"
+
 #
 # Template Aliases
 #
