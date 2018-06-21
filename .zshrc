@@ -139,6 +139,10 @@ virtual1 () {
   ssh -i "rileymathews.pem" riley@ec2-34-238-244-61.compute-1.amazonaws.com
 }
 
+sendToVirtual1 () {
+  scp -i ~/.keys/rileymathews.pem $1 riley@ec2-34-238-244-61.compute-1.amazonaws.com:$2
+}
+
 #
 # Template Aliases
 #
