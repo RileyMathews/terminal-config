@@ -134,7 +134,10 @@ alias find8080="sudo lsof -i:8080"
 
 alias apihere="json-server -w database.json -p 8088"
 
-alias virtual1='ssh -i "rileymathews.pem" riley@ec2-34-238-244-61.compute-1.amazonaws.com'
+virtual1 () {
+  cd ~/.keys
+  ssh -i "rileymathews.pem" riley@ec2-34-238-244-61.compute-1.amazonaws.com
+}
 
 #
 # Template Aliases
