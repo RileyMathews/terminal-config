@@ -136,11 +136,15 @@ alias apihere="json-server -w database.json -p 8088"
 
 virtual1 () {
   cd ~/.keys
-  ssh -i "rileymathews.pem" riley@ec2-34-238-244-61.compute-1.amazonaws.com
+  ssh -i "rileymathews.pem" riley@ec2-35-153-78-244.compute-1.amazonaws.com
 }
 
 sendToVirtual1 () {
-  scp -i ~/.keys/rileymathews.pem $1 riley@ec2-34-238-244-61.compute-1.amazonaws.com:$2
+  scp -i ~/.keys/rileymathews.pem $1 rileye@ec2-35-153-78-244.compute-1.amazonaws.com:~
+}
+
+pushGameStoneBuild () {
+  scp -r ~/.keys/rileymathews.pem $1 riley@ec2-35-153-78-244.compute-1.amazonaws.com:~
 }
 
 #
