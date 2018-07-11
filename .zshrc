@@ -421,6 +421,13 @@ rpl () {
   cd ..
 }
 
+react-json-start () {
+  cd api
+  api database.json
+  cd ../app
+  ttab -w npm start
+}
+
 
 #Auto jump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
@@ -530,6 +537,7 @@ help () {
   echo mdpbt___________________________make new distributable project with bootstrap and template package file as of May 8, 2018
   echo rp______________________________open up two new terminal windows with http server and grunt running
   echo rpl_____________________________same command as above but modified to work with linux terminal
+  echo react-json-start________________resumes react project with json server
   echo buzsh___________________________commits and pushes zshrc file to github
   echo udzsh___________________________updates zshrc file from github
   echo butemp__________________________push up templates to github
