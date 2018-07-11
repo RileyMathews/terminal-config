@@ -147,6 +147,10 @@ pushGameStoneBuild () {
   scp -r ~/.keys/rileymathews.pem $1 riley@ec2-35-153-78-244.compute-1.amazonaws.com:~
 }
 
+findProcess () {
+  ps -ax | grep $1
+}
+
 #
 # Template Aliases
 #
@@ -548,9 +552,7 @@ help () {
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+eval "$(pyenv init -)"
 
 # aws es2
 export PATH=$PATH:$HOME/.local/bin
