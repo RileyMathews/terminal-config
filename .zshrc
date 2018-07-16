@@ -223,7 +223,7 @@ gitstart() {
 
 
 simplehtml () {
-echo '<!doctype html> 
+echo '<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -254,7 +254,7 @@ echo '<!doctype html>
 }
 
 simplejquery () {
-  echo '<!doctype html> 
+  echo '<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -289,7 +289,7 @@ class $1 extends Component {
 
     render() {
         return (
-        
+
         )
     }
 }
@@ -511,13 +511,14 @@ help () {
   echo api_____________________________serves json api on port 8088
   echo pyserve_________________________serves a python http server on port 8080
   echo find8080________________________finds the process currently using port 8080
+  echo findProcess_____________________finds process of the name passed to it
   echo nuke____________________________Remove file or directory
   echo gpom____________________________git push origin master
   echo gpum____________________________git push upstream master
   echo gs______________________________git status
-  echo gc______________________________git checkout 
-  echo gpo_____________________________git push origin 
-  echo gpu_____________________________git push upstream 
+  echo gc______________________________git checkout
+  echo gpo_____________________________git push origin
+  echo gpu_____________________________git push upstream
   echo gcm_____________________________git commit -m
   echo gcma____________________________git commit -a -m
   echo hookup__________________________git remote add origin
