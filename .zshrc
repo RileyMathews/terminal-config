@@ -126,7 +126,7 @@ alias hs="http-server"
 alias golive="~/ngrok http 8080"
 alias reactlive="~/ngrok http 3000"
 
-alias pyman="python manage.py runserver"
+alias pyman="python manage.py"
 
 
 alias zshthemes="cd ~/.oh-my-zsh/themes"
@@ -521,7 +521,7 @@ help () {
   echo _______________________________________________________
   echo api_____________________________serves json api on port 8088
   echo pyserve_________________________serves a python http server on port 8080
-  echo pyman___________________________starts django web server
+  echo pyman___________________________alias for python manage.py
   echo find8080________________________finds the process currently using port 8080
   echo findProcess_____________________finds process of the name passed to it
   echo nuke____________________________Remove file or directory
