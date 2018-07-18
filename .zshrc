@@ -124,6 +124,7 @@ alias hookup="git remote add origin"
 #
 alias hs="http-server"
 alias golive="~/ngrok http 8080"
+alias reactlive="~/ngrok http 3000"
 
 
 alias zshthemes="cd ~/.oh-my-zsh/themes"
@@ -133,6 +134,10 @@ alias pyserve="python3 -m http.server --bind 127.0.0.1 8080"
 alias find8080="sudo lsof -i:8080"
 
 alias apihere="json-server -w database.json -p 8088"
+
+update_portfolio () {
+  aws s3 cp $1 s3://rileymathews.com/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+}
 
 virtual1 () {
   cd ~/.keys
@@ -289,7 +294,9 @@ class $1 extends Component {
 
     render() {
         return (
+            <React.Fragment>
 
+            </React.Fragment>
         )
     }
 }
@@ -554,6 +561,10 @@ help () {
   echo copyGitIgnore
   echo copyHTMLBootstrap
   echo copyReactLint
+}
+
+help-deployment () {
+  echo update_portfolio_____________updates portfolio site
 }
 
 
