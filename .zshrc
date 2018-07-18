@@ -126,7 +126,7 @@ alias hs="http-server"
 alias golive="~/ngrok http 8080"
 alias reactlive="~/ngrok http 3000"
 
-alias pyman="python manage.py"
+alias pyman="python manage.py "
 
 
 alias zshthemes="cd ~/.oh-my-zsh/themes"
