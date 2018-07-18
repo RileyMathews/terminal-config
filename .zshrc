@@ -136,7 +136,9 @@ alias find8080="sudo lsof -i:8080"
 alias apihere="json-server -w database.json -p 8088"
 
 update_portfolio () {
-  aws s3 cp $1 s3://rileymathews.com/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+  nuke build
+  npm run build
+  aws s3 cp ./build s3://rileymathews.com/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 }
 
 virtual1 () {
