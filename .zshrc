@@ -127,6 +127,10 @@ alias golive="~/ngrok http 8080"
 alias reactlive="~/ngrok http 3000"
 
 alias pyman="python manage.py "
+alias snek="python manage.py"
+alias runsnek="python manage.py runserver"
+alias startsnek="django-admin startproject"
+alias snekapp="python manage.py startapp"
 
 
 alias zshthemes="cd ~/.oh-my-zsh/themes"
@@ -570,6 +574,16 @@ help () {
 
 help-deployment () {
   echo update_portfolio_____________updates portfolio site
+}
+
+help-python () {
+  echo _______________________________________________________________
+  echo _______________________python aliases__________________________
+  echo _______________________________________________________________
+  echo pyman/snek_____________________________python manage.py
+  echo runsnek________________________________python manage.py runserver
+  echo startsnek______________________________django-admin startproject
+  echo snekapp________________________________python manage.py startapp
 }
 
 
