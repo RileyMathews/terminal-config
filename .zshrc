@@ -113,6 +113,7 @@ alias gpom="git push origin master"
 alias gpum="git push upstream master"
 alias gs="git status"
 alias gc="git checkout "
+alias gcb="git checkout -b"
 alias gpo="git push origin "
 alias gpu="git push upstream "
 alias gcm="git commit -m"
@@ -533,6 +534,7 @@ help () {
   echo gpum____________________________git push upstream master
   echo gs______________________________git status
   echo gc______________________________git checkout
+  echo gcb_____________________________git checkout -b
   echo gpo_____________________________git push origin
   echo gpu_____________________________git push upstream
   echo gcm_____________________________git commit -m
@@ -586,6 +588,9 @@ help-python () {
   echo snekapp________________________________python manage.py startapp
 }
 
+help-aws () {
+  echo aws s3 cp ./build s3://bucket-name.com/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+}
 
 # pyenv
 
