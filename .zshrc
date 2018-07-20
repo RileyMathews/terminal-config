@@ -592,6 +592,13 @@ help-aws () {
   echo aws s3 cp ./build s3://bucket-name.com/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 }
 
+help-rest() {
+  echo 1. model of class in models.py
+  echo 2. serializer of class in serializers.py
+  echo 3. in views.py create view using model and serializer
+  echo 4. in urls.py register the view in a url
+}
+
 # pyenv
 
 export PYENV_ROOT="$HOME/.pyenv"
