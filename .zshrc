@@ -176,7 +176,7 @@ findProcess () {
 buzsh() {
   cd ~/TerminalConfig
   git add .zshrc
-  git commit -m "edited zshrc"
+  git commit -m "$1"
   git push origin master
   cd -
 }
