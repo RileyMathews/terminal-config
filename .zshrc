@@ -132,6 +132,9 @@ alias snek="python manage.py"
 alias runsnek="python manage.py runserver"
 alias startsnek="django-admin startproject"
 alias snekapp="python manage.py startapp"
+snekenv() {
+  source $1/bin/activate
+}
 
 
 alias zshthemes="cd ~/.oh-my-zsh/themes"
@@ -593,8 +596,8 @@ help-aws () {
 }
 
 help-rest() {
-  echo 1. model of class in models.py
-  echo 2. serializer of class in serializers.py
+  echo 1. create class that is model of data in models.py
+  echo 2. create a serializer that uses that model and displays its fields in serializers.py
   echo 3. in views.py create view using model and serializer
   echo 4. in urls.py register the view in a url
 }
