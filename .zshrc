@@ -119,6 +119,7 @@ alias gpu="git push upstream "
 alias gcm="git commit -m"
 alias gcma="git commit -a -m"
 alias hookup="git remote add origin"
+alias gpm="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
 
 #
 # Custom Aliases
@@ -542,6 +543,7 @@ help () {
   echo gpu_____________________________git push upstream
   echo gcm_____________________________git commit -m
   echo gcma____________________________git commit -a -m
+  echo gpm_____________________________prunes all local branches that have been merged to master
   echo hookup__________________________git remote add origin
   echo hs______________________________start http server
   echo golive__________________________start ngrok server on port 8080
