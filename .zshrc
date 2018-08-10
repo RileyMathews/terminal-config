@@ -128,6 +128,8 @@ alias hs="http-server"
 alias golive="~/ngrok http 8080"
 alias reactlive="~/ngrok http 3000"
 
+alias weather="curl -4 http://wttr.in/Nashville"
+
 alias pyman="python manage.py "
 alias snek="python manage.py"
 alias runsnek="python manage.py runserver"
@@ -135,6 +137,19 @@ alias startsnek="django-admin startproject"
 alias snekapp="python manage.py startapp"
 snekenv() {
   source $1/bin/activate
+}
+
+fakesnek() {
+  django_data.sh $1 faker_factory
+}
+
+snekremigrate() {
+  rm -rf db.sqlite3
+  cd $1
+  rm -rf migrations
+  cd ..
+  python manage.py makemigrations $1
+  python manage.py migrate
 }
 
 
@@ -591,6 +606,7 @@ help-python () {
   echo runsnek________________________________python manage.py runserver
   echo startsnek______________________________django-admin startproject
   echo snekapp________________________________python manage.py startapp
+  echo snekremigrate__________________________takes 1 argument of app name, nukes database and migrations and reruns them
 }
 
 help-aws () {
