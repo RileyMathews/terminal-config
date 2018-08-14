@@ -135,9 +135,17 @@ alias snek="python manage.py"
 alias runsnek="python manage.py runserver"
 alias startsnek="django-admin startproject"
 alias snekapp="python manage.py startapp"
-snekenv() {
+snekon() {
   source $1/bin/activate
 }
+
+cdenv() {
+  cd ..
+  source $1/bin/activate
+  cd -
+}
+
+alias snekoff="deactivate"
 
 fakesnek() {
   django_data.sh $1 faker_factory
@@ -607,6 +615,8 @@ help-python () {
   echo startsnek______________________________django-admin startproject
   echo snekapp________________________________python manage.py startapp
   echo snekremigrate__________________________takes 1 argument of app name, nukes database and migrations and reruns them
+  echo snekon_________________________________takes arguemnt of env name and sources it
+  echo cdenv__________________________________same as above but is run from child directory
 }
 
 help-aws () {
