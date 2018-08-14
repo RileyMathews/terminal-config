@@ -602,6 +602,45 @@ help () {
   echo copyReactLint
 }
 
+help-js() {
+  echo simplehtml______________________start a simple html project with provided styles and js file
+  echo simplejquery____________________start a simple html project with jquery tag included
+  echo RComp___________________________creates a react component template file
+  echo mdp_____________________________make new distributable project
+  echo mdpb____________________________make new distributable project with bootstrap
+  echo mdpt____________________________make new distributable project with template package file as of May 8, 2018
+  echo mdpbt___________________________make new distributable project with bootstrap and template package file as of May 8, 2018
+  echo rp______________________________open up two new terminal windows with http server and grunt running
+  echo rpl_____________________________same command as above but modified to work with linux terminal
+  echo react-json-start________________resumes react project with json server
+}
+
+help-copy() {
+  echo copySASSBootstrap
+  echo copyHTML
+  echo copyGrunt
+  echo copyESLint
+  echo copyGitIgnore
+  echo copyHTMLBootstrap
+  echo copyReactLint
+}
+
+help-git() {
+  echo gpom____________________________git push origin master
+  echo gpum____________________________git push upstream master
+  echo gs______________________________git status
+  echo gc______________________________git checkout
+  echo gcb_____________________________git checkout -b
+  echo gpo_____________________________git push origin
+  echo gpu_____________________________git push upstream
+  echo gcm_____________________________git commit -m
+  echo gcma____________________________git commit -a -m
+  echo gpm_____________________________prunes all local branches that have been merged to master
+  echo hookup__________________________git remote add origin
+  echo gitupdate_______________________git fetch all and pull master
+  echo gitstart________________________starts git repo locally and pushes to provided remote
+}
+
 help-deployment () {
   echo update_portfolio_____________updates portfolio site
 }
