@@ -124,6 +124,7 @@ alias gpm="git branch --merged master | grep -v '^[ *]*master$' | xargs git bran
 #
 # Custom Aliases
 #
+alias nw="ttab -w"
 alias hs="http-server"
 alias golive="~/ngrok http 8080"
 alias reactlive="~/ngrok http 3000"
@@ -173,6 +174,12 @@ update_portfolio () {
   nuke build
   npm run build
   aws s3 cp ./build s3://rileymathews.com/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+}
+
+update_band_site () {
+  nuke build
+  npm run build
+  aws s3 cp ./build s3://almanacridge.com/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 }
 
 virtual1 () {
@@ -643,6 +650,7 @@ help-git() {
 
 help-deployment () {
   echo update_portfolio_____________updates portfolio site
+  echo update_band_site_____________updates band site
 }
 
 help-python () {
@@ -667,6 +675,21 @@ help-rest() {
   echo 2. create a serializer that uses that model and displays its fields in serializers.py
   echo 3. in views.py create view using model and serializer
   echo 4. in urls.py register the view in a url
+}
+
+help-docker() {
+  echo docker images_________________________________shows a list of all available images
+  echo docker busybox________________________________a test image that runs the sent command and then exits
+  echo docker ps_____________________________________lists the running docker instances
+  echo docker ps -a__________________________________detailed list
+  echo docker run -it [busybox] sh___________________runs instance and puts your terminal into it
+  echo docker rm $(docker ps -a -q -f status=exited)_quits all exited docker instances
+}
+
+help-postgres() {
+  echo brew services start postgresql__________________________starts postgres as a service that will start up on login
+  echo brew services stop postgresql___________________________stops postgres
+  echo brew services run postgresql____________________________runs postgres but will not launch on startup
 }
 
 # pyenv
