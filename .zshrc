@@ -182,6 +182,31 @@ update_band_site () {
   aws s3 cp ./build s3://almanacridge.com/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 }
 
+update_gamestone () {
+  nuke build
+  npm run build
+  aws s3 cp ./build s3://gamestone.rileymathews.com/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+}
+
+atomic_rocket () {
+  code .
+  ttab -w _atomic_rocket_helper_1
+  ttab -w _atomic_rocket_helper_2
+  cd frontend
+  ttab -w npm start
+}
+
+_atomic_rocket_helper_1 () {
+  source env/bin/activate
+  cd backend
+}
+
+_atomic_rocket_helper_2 () {
+  source env/bin/activate
+  cd backend
+  python manage.py runserver
+}
+
 virtual1 () {
   cd ~/.keys
   ssh -i "rileymathews.pem" riley@ec2-35-153-78-244.compute-1.amazonaws.com
