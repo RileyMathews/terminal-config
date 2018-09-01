@@ -104,6 +104,12 @@ alias zshsource="source ~/.zshrc"
 # Prompt
 #
 
+psql() {
+  cd /Users/rileymathews/PostgreSQL/pg10
+  source pg10.env
+  bin/psql;cd -
+}
+
 
 #
 # GIT Aliases
@@ -136,6 +142,8 @@ alias snek="python manage.py"
 alias runsnek="python manage.py runserver"
 alias startsnek="django-admin startproject"
 alias snekapp="python manage.py startapp"
+alias coldsnek="pip freeze > requirements.txt"
+alias needsnek="pip install -r requirements.txt"
 snekon() {
   source $1/bin/activate
 }
@@ -188,6 +196,18 @@ update_gamestone () {
   aws s3 cp ./build s3://gamestone.rileymathews.com/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 }
 
+update_lesson_ninja() {
+  nuke build
+  npm run build
+  aws s3 cp ./build s3://lesson.ninja/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+}
+
+update_tc_proto() {
+  nuke build
+  npm run build
+  aws s3 cp ./build s3://tc-front-end-proto/ --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+}
+
 atomic_rocket () {
   code .
   ttab -w _atomic_rocket_helper_1
@@ -216,8 +236,9 @@ sendToVirtual1 () {
   scp -i ~/.keys/rileymathews.pem $1 rileye@ec2-35-153-78-244.compute-1.amazonaws.com:~
 }
 
-pushGameStoneBuild () {
-  scp -r ~/.keys/rileymathews.pem $1 riley@ec2-35-153-78-244.compute-1.amazonaws.com:~
+ssh_gamestone_backend() {
+  cd ~/.keys
+  ssh rileymathews@206.189.229.10
 }
 
 findProcess () {
@@ -552,6 +573,10 @@ copyGitIgnore() {
     cp ~/templates/git/.gitignore ./.gitignore
 }
 
+copyDjangoGitIgnore() {
+    cp ~/templates/git/django-gitignore.gitignore ./.gitignore
+}
+
 copyPackage() {
   cp ~/templates/npm/package.json ./package.json
 }
@@ -717,6 +742,10 @@ help-postgres() {
   echo brew services run postgresql____________________________runs postgres but will not launch on startup
 }
 
+help-ssh() {
+  echo ssh_gamestone_backend______________________________jumps into server for gamestones api
+}
+
 # pyenv
 
 export PYENV_ROOT="$HOME/.pyenv"
@@ -725,3 +754,6 @@ eval "$(pyenv init -)"
 
 # aws es2
 export PATH=$PATH:$HOME/.local/bin
+
+# mysql
+export e PATH=$PATH:/usr/local/mysql/bin
