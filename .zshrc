@@ -178,6 +178,8 @@ alias find8080="sudo lsof -i:8080"
 
 alias apihere="json-server -w database.json -p 8088"
 
+alias reactlive="python ~/python-scripts/react-deployment/deploy-react-to-s3.py"
+
 update_portfolio () {
   nuke build
   npm run build
@@ -209,7 +211,6 @@ update_tc_proto() {
 }
 
 atomic_rocket () {
-  code .
   ttab -w _atomic_rocket_helper_1
   ttab -w _atomic_rocket_helper_2
   cd frontend
