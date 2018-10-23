@@ -18,6 +18,9 @@ ZSH_THEME="riley"
 ######JAVA####
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+######RUBY####
+eval "$(rbenv init -)"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -127,6 +130,14 @@ alias gcma="git commit -a -m"
 alias hookup="git remote add origin"
 alias gpm="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
 
+# 
+# python aliases
+# 
+newenv() 
+{
+  python -m venv $1
+}
+
 #
 # Custom Aliases
 #
@@ -175,6 +186,10 @@ alias zshthemes="cd ~/.oh-my-zsh/themes"
 alias pyserve="python3 -m http.server --bind 127.0.0.1 8080"
 
 alias find8080="sudo lsof -i:8080"
+
+findport() {
+  sudo lsof -i:$1
+}
 
 alias apihere="json-server -w database.json -p 8088"
 
@@ -715,6 +730,7 @@ help-python () {
   echo snekremigrate__________________________takes 1 argument of app name, nukes database and migrations and reruns them
   echo snekon_________________________________takes arguemnt of env name and sources it
   echo cdenv__________________________________same as above but is run from child directory
+  echo newenv_________________________________creates a new python virtual environment
 }
 
 help-aws () {
@@ -758,3 +774,5 @@ export PATH=$PATH:$HOME/.local/bin
 
 # mysql
 export e PATH=$PATH:/usr/local/mysql/bin
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
