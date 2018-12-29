@@ -18,8 +18,6 @@ ZSH_THEME="riley"
 ######JAVA####
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-######RUBY####
-eval "$(rbenv init -)"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -763,11 +761,6 @@ help-ssh() {
   echo ssh_gamestone_backend______________________________jumps into server for gamestones api
 }
 
-# pyenv
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 # aws es2
 export PATH=$PATH:$HOME/.local/bin
