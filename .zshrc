@@ -7,7 +7,7 @@ export ZSH=/Users/rileymathews/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="riley"
+ZSH_THEME="af-magic"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -105,12 +105,6 @@ alias zshsource="source ~/.zshrc"
 # Prompt
 #
 
-psql() {
-  cd /Users/rileymathews/PostgreSQL/pg10
-  source pg10.env
-  bin/psql;cd -
-}
-
 
 #
 # GIT Aliases
@@ -127,6 +121,15 @@ alias gcm="git commit -m"
 alias gcma="git commit -a -m"
 alias hookup="git remote add origin"
 alias gpm="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
+
+# 
+# Docker aliases
+# 
+alias dcup="docker-compose up --rm"
+alias dcbuild="docker-compose build"
+alias dcdown="docker-compose down"
+alias dcrun="docker-compsoe run --rm"
+alias dcexec="docker-compose exec"
 
 # 
 # python aliases
